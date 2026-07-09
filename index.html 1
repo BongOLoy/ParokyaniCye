@@ -1,1 +1,85 @@
+<!DOCTYPE html>
 
+<html>
+  
+<body style="background-color:#F0FFF0; font-family:Arial;">
+
+    
+    <div style="background-color:#0038A8; color:white; padding:20px;">
+      
+        <h2><b>STUDENT INFORMATION</b></h2>
+      
+        <h3><i>COMPUTER ACTIVITY</i></h3>
+    </div>
+  
+
+    <br>
+
+   
+    <div style="background-color:#E6E6FA; width:80%; padding:20px; border:2px solid #CE1126; margin:auto;">
+
+        <h2 style="color:#0038A8;">INFORMATION:</h2>
+
+        
+        <div style="background-color:gray; padding:20px; border-radius:10px;">
+
+            <center>
+                <h2 style="color:red;">NAME: Charlie B. Ramos</h2>
+
+                <h3 style="color:Blue;">
+                    <b> SECTION: G9 - Galatians</b>
+                </h3>
+                
+                <h3 style="color:Blue;">
+                  SY: 2026-2027
+
+                <h4 style="color:green;">
+                    AGE: 13 years old
+                </h4>
+
+                <h4 style="color:green;">
+                    DATE OF BIRTH: November 12, 2012
+                </h4>
+                
+                <h5 style="color:purple;">
+                    RELIGION: Catholic
+                
+                <h6 style="color:yellow;">
+                  GENDER: Male
+                  </h6>
+                  
+                  <h6 style="color:yellow;">
+                   PRONOUNCE: He/Him
+                   </h6>
+
+                <a 
+
+
+                <p><h1><center> Here is Video of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>. </center></h1></p>
+
+<video width="400" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML video.
+</video>
+
+
+                
+                 href="https://en.wikipedia.org/wiki/Mobile_Legends:_Bang_Bang"
+          <h1 style="background-color:white;">             Visit my Favorite Game!</h1>
+          
+                </a>
+
+                <br><br>
+
+                <img src="https://drive.google.com/thumbnail?id=1oHw3pjcLD7WFy_J7QDmwxaoIhAw2LhRV&sz=w1000"
+                     width="270" height="200">
+
+            </center>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
