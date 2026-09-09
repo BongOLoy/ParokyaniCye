@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Superheroes</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            /* CSS Background Properties */
+            background-color: #101820;
+            background-image: url("superhero.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        main {
+            background-color: rgba(255, 255, 255, 0.92);
+            width: 80%;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        main h2 {
+            color: #1d3557;
+        }
+
+        .hero {
+            display: inline-block;
+            width: 25%;
+            margin: 10px;
+            padding: 20px;
+            background-color: #eeeeee;
+            border-radius: 10px;
+        }
+
+        .bottom-nav {
+            background-color: rgba(0, 0, 0, 0.85);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #e63946;
+            color: white;
+            padding: 12px 30px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #ffb703;
+            color: black;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.95);
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>SUPERHEROES</h1>
+        <p>Heroes Who Inspire Us</p>
+    </header>
+
+    <main>
+        <h2>About Superheroes</h2>
+
+        <p>
+            Superheroes are fictional characters known for their special
+            abilities, courage, and determination. They use their powers
+            to protect people and fight against evil.
+        </p>
+
+        <h2>Popular Superheroes</h2>
+
+        <div class="hero">
+            <h3>Superman</h3>
+            <p>The Man of Steel and one of the most iconic superheroes.</p>
+        </div>
+
+        <div class="hero">
+            <h3>Spider-Man</h3>
+            <p>A hero who uses his powers to protect his city.</p>
+        </div>
+
+        <div class="hero">
+            <h3>Batman</h3>
+            <p>A hero who fights crime using intelligence and technology.</p>
+        </div>
+    </main>
+
+    <hr>
+
+    <div class="bottom-nav">
+        <!-- Replace # with your actual links -->
+        <a href="#" class="button">Marvel</a>
+        <a href="#" class="button">DC</a>
+    </div>
+
+    <footer>
+        <p>Created by: Charlie | Activity 3: CSS Background</p>
+    </footer>
+
+</body>
+</html>
