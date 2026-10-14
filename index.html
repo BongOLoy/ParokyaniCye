@@ -1,166 +1,425 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-    <title>My Homepage</title>
-<style>
-    body {
-        background-color: #F0FFF0;
-        font-family: Arial;
-        margin: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header {
-        background-color: #0038A8;
-        color: white;
-        text-align: center;
-        padding: 25px;
-    }
+    <title>My Homepage | Computer Activity</title>
 
-    .section-box {
-        width: 80%;
-        margin: 25px auto;
-        padding: 20px;
-        background-color: white;
-        border: 2px solid #0038A8;
-        border-radius: 10px;
-    }
+ 
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-    .photo {
-        background-color: #E6E6FA;
-        text-align: center;
-    }
+        body {
+            background-color: #F3F6FC;
+            color: #202B3C;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
 
-    .links {
-        width: 80%;
-        margin: 25px auto;
-        display: flex;
-        justify-content: space-between;
-        gap: 30px;
-    }
+        header {
+            background: linear-gradient(135deg, #101B35, #174EA6);
+            color: white;
+            text-align: center;
+            padding: 48px 20px;
+            border-bottom: 4px solid #45C4F5;
+        }
 
-    .left-links,
-    .right-links {
-        padding: 15px;
-    }
+        header h1 {
+            font-size: 36px;
+            letter-spacing: 3px;
+            margin: 0;
+        }
 
-    .links a {
-        display: block;
-        margin: 10px;
-        padding: 11px 24px;
-        background-color: #0038A8;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        font-family: Arial;
-        font-size: 15px;
-        font-weight: normal;
-        letter-spacing: 0.5px;
-        border-radius: 10px;
-        transition: 0.3s;
-        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.12);
-    }
+        header p {
+            color: #C9E8FF;
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            margin: 8px 0 0;
+        }
 
-    .links a:hover {
-        background-color: #CE1126;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
-    }
+        nav {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #DCE4F0;
+        }
 
-    footer {
-        background-color: #0038A8;
-        color: white;
-        text-align: center;
-        padding: 15px;
-        margin-top: 30px;
-    }
-</style>
+        nav h2 {
+            color: #15366C;
+            font-size: 18px;
+            margin: 0 0 14px;
+        }
 
-<link rel="stylesheet" href="style.css">
+        .toc-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
 
+        .toc-links a {
+            background-color: #EDF4FF;
+            color: #174EA6;
+            padding: 8px 15px;
+            border: 1px solid #D3E2FA;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.25s;
+        }
 
+        .toc-links a:hover {
+            background-color: #174EA6;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        main {
+            width: 88%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .section-box {
+            background-color: white;
+            padding: 28px;
+            margin-bottom: 24px;
+            border: 1px solid #DCE4F0;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(20, 45, 85, 0.05);
+        }
+
+        .section-title {
+            color: #15366C;
+            font-size: 22px;
+            margin: 0 0 6px;
+        }
+
+        .section-description {
+            color: #6B778B;
+            font-size: 14px;
+            margin: 0 0 22px;
+        }
+
+        #photo {
+            text-align: center;
+            background: linear-gradient(135deg, #FFFFFF, #EAF3FF);
+        }
+
+        .photo-frame {
+            display: inline-block;
+            max-width: 100%;
+            padding: 7px;
+            background-color: white;
+            border: 2px solid #C8DDF8;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(23, 78, 166, 0.10);
+        }
+
+        .photo-frame img {
+            display: block;
+            width: 270px;
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 9px;
+        }
+
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .link-card {
+            background-color: #F8FAFF;
+            border: 1px solid #DFE8F5;
+            border-radius: 11px;
+            padding: 22px;
+            transition: 0.25s;
+        }
+
+        .link-card:hover {
+            border-color: #A9C9F5;
+            box-shadow: 0 5px 15px rgba(23, 78, 166, 0.07);
+            transform: translateY(-2px);
+        }
+
+        .link-card h3 {
+            color: #15366C;
+            font-size: 17px;
+            margin: 0 0 14px;
+        }
+
+        .button-link {
+            display: block;
+            background-color: #174EA6;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 11px 14px;
+            border: 1px solid #174EA6;
+            border-radius: 7px;
+            transition: 0.25s;
+        }
+
+        .button-link:hover {
+            background-color: #101B35;
+            border-color: #45C4F5;
+        }
+
+        #pages .link-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        #pages .link-card {
+            text-align: center;
+            padding: 22px 16px;
+        }
+
+        .page-number {
+            display: inline-block;
+            color: #174EA6;
+            background-color: #E5EFFF;
+            border: 1px solid #D3E2FA;
+            border-radius: 6px;
+            padding: 4px 10px;
+            margin-bottom: 12px;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .page-card-title {
+            color: #203A62;
+            font-size: 15px;
+            margin: 0 0 16px;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            background-color: #101B35;
+            color: white;
+            text-align: center;
+            padding: 23px 15px;
+            border-top: 4px solid #45C4F5;
+        }
+
+        footer p {
+            margin: 4px 0;
+            font-size: 13px;
+        }
+
+        footer .school-year {
+            color: #A9DFFF;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .back-top {
+            display: inline-block;
+            color: #A9DFFF;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .back-top:hover {
+            text-decoration: underline;
+        }
+
+        a:focus-visible {
+            outline: 3px solid #0B8EC5;
+            outline-offset: 4px;
+        }
+
+        
+        @media (max-width: 700px) {
+            header {
+                padding: 38px 15px;
+            }
+
+            header h1 {
+                font-size: 29px;
+            }
+
+            header p {
+                font-size: 12px;
+            }
+
+            main {
+                width: 92%;
+                margin: 22px auto;
+            }
+
+            .section-box {
+                padding: 20px;
+            }
+
+            .link-grid,
+            #pages .link-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .toc-links a {
+                padding: 8px 11px;
+            }
+        }
+    </style>
+
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    
+    <header id="home">
+        <h1>MY HOMEPAGE</h1>
+        <p>COMPUTER | SCHOOL YEAR 2026–2027</p>
+    </header>
 
+    <!-- Table of Contents -->
+    <nav aria-label="Table of Contents">
+        <h2>TABLE OF CONTENTS</h2>
 
-<header id="home">
-    <h1>MY HOMEPAGE</h1>
-    <h3><i>COMPUTER</i></h3>
-</header>
+        <div class="toc-links">
+            <a href="#home">Home</a>
+            <a href="#photo">My Photo</a>
+            <a href="#quick-links">Quick Links</a>
+            <a href="#pages">My Pages</a>
+            <a href="#footer">School Year</a>
+        </div>
+    </nav>
 
+    <main>
 
+        <!-- Photo Section -->
+        <section class="section-box" id="photo">
+            <h2 class="section-title">MY PHOTO</h2>
 
-<section class="section-box photo">
+            <p class="section-description">
+                Welcome to my personal computer activity homepage.
+            </p>
 
-    <img
-        src="https://drive.google.com/thumbnail?id=1oHw3pjcLD7WFy_J7QDmwxaoIhAw2LhRV&sz=w1000"
-        width="270"
-        height="200"
-        style="border:4px solid #CE1126; border-radius:10px;"
-    >
+            <div class="photo-frame">
+                <img
+                    src="https://drive.google.com/thumbnail?id=1oHw3pjcLD7WFy_J7QDmwxaoIhAw2LhRV&sz=w1000"
+                    alt="My personal photo"
+                    style="border: 2px solid #E1EAF7;"
+                >
+            </div>
+        </section>
 
-</section>
+        <!-- Quick Links -->
+        <section class="section-box" id="quick-links">
+            <h2 class="section-title">QUICK LINKS</h2>
 
+            <p class="section-description">
+                Access the webpages I created and useful websites.
+            </p>
 
+            <div class="link-grid">
 
-<div class="links">
+                <div class="link-card">
+                    <h3>Google</h3>
 
-    <div class="left-links">
+                    <a class="button-link"
+                       href="https://www.google.com"
+                       target="_blank">
+                        OPEN GOOGLE ↗
+                    </a>
+                </div>
 
-        <a href="https://www.google.com" target="_blank">
-            GOOGLE
+                <div class="link-card">
+                    <h3>EULAP LMS</h3>
+
+                    <a class="button-link"
+                       href="http://vcmc.eulap.co:8080/cbs/a/login"
+                       target="_blank">
+                        OPEN LMS ↗
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        
+        <section class="section-box" id="pages">
+            <h2 class="section-title">MY WEB PAGES</h2>
+
+            <p class="section-description">
+                My Computer Activities
+            </p>
+
+            <div class="link-grid">
+
+                <div class="link-card">
+                    <span class="page-number">PAGE 01</span>
+                    <h3 class="page-card-title">Personal Details</h3>
+                    <a class="button-link" href="page1.html" target="_blank">VISIT PAGE ↗</a>
+                </div>
+
+                <div class="link-card">
+                    <span class="page-number">PAGE 02</span>
+                    <h3 class="page-card-title">Nutrition Month</h3>
+                    <a class="button-link" href="page2.html" target="_blank">VISIT PAGE ↗</a>
+                </div>
+
+                <div class="link-card">
+                    <span class="page-number">PAGE 03</span>
+                    <h3 class="page-card-title">Buwan ng Wika</h3>
+                    <a class="button-link" href="page3.html" target="_blank">VISIT PAGE ↗</a>
+                </div>
+
+                <div class="link-card">
+                    <span class="page-number">PAGE 04</span>
+                    <h3 class="page-card-title">CSS Selector</h3>
+                    <a class="button-link" href="page4.html" target="_blank">VISIT PAGE ↗</a>
+                </div>
+
+                <div class="link-card">
+                    <span class="page-number">PAGE 05</span>
+                    <h3 class="page-card-title">CSS Border</h3>
+                    <a class="button-link" href="page5.html" target="_blank">VISIT PAGE ↗</a>
+                </div>
+
+                <div class="link-card">
+                    <span class="page-number">PAGE 06</span>
+                    <h3 class="page-card-title">CSS Background</h3>
+                    <a class="button-link" href="page6.html" target="_blank">VISIT PAGE ↗</a>
+                </div>
+
+                <div class="link-card">
+                    <span class="page-number">PAGE 07</span>
+                    <h3 class="page-card-title">CSS Box Model</h3>
+                    <a class="button-link" href="page7.html" target="_blank">VISIT PAGE ↗</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p class="school-year">SCHOOL YEAR 2026–2027</p>
+        <p>Computer / My Homepage</p>
+
+        <a class="back-top" href="#home">
+            Return to top ↑
         </a>
-
-        <a href="http://vcmc.eulap.co:8080/cbs/a/login" target="_blank">
-            LMS
-        </a>
-
-    </div>
-
-
-    <div class="right-links">
-
-        <a href="page1.html" target="_blank">
-            PAGE 1
-        </a>
-
-        <a href="page2.html" target="_blank">
-            PAGE 2
-        </a>
-
-        <a href="page3.html" target="_blank">
-            PAGE 3
-        </a>
-
-        <a href="page4.html" target="_blank">
-            PAGE 4
-        </a>
-
-        <a href="page5.html" target="_blank">
-            PAGE 5
-        </a>
-
-        <a href="page6.html" target="_blank">
-            PAGE 6
-        </a>
-
-        <a href="page7.html" target="_blank">
-            PAGE 7
-        </a>
-
-    </div>
-
-</div>
-
-
-<footer>
-
-    <p>SY 2026-2027</p>
-
-</footer>
+    </footer>
 
 </body>
 </html>
