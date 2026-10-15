@@ -1,90 +1,272 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+    <title>Student Information</title>
+
     <style>
-        header {
-            background-color: #0038A8;
-            color: white;
-            padding: 20px;
+        * {
+            box-sizing: border-box;
+            font-family: Arial;
         }
+
+        body {
+            background-color: #F0FFF0;
+            margin: 0;
+            color: #24344D;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0038A8, #1677D2);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 5px solid #52D6F4;
+        }
+
+        header h2 {
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        header h3 {
+            margin-bottom: 0;
+            font-weight: normal;
+            color: #D9F2FF;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 950px;
+            margin: 35px auto;
+            background-color: white;
+            padding: 25px;
+            border: 2px solid #D5E3F5;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px #00000015;
+        }
+
+        .title {
+            background-color: #E6EEFF;
+            color: #0038A8;
+            padding: 12px 18px;
+            border-left: 6px solid #0038A8;
+            border-radius: 6px;
+            margin-top: 0;
+        }
+
+        .profile {
+            text-align: center;
+            background: linear-gradient(135deg, #F1F6FF, #E6F9FF);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #C7DDF5;
+            margin-bottom: 25px;
+        }
+
+        .profile img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            outline: 3px solid #1677D2;
+            margin: 10px 0;
+        }
+
+        .profile h2 {
+            color: #0038A8;
+            margin-bottom: 5px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .info-card {
+            background-color: #F8FAFF;
+            padding: 16px;
+            border: 1px solid #DCE6F5;
+            border-left: 5px solid #1677D2;
+            border-radius: 9px;
+            transition: 0.3s;
+        }
+
+        .info-card:hover {
+            background-color: #EAF3FF;
+            transform: translateY(-3px);
+        }
+
+        .info-card h4 {
+            color: #527092;
+            font-size: 13px;
+            margin: 0 0 8px;
+            letter-spacing: 1px;
+        }
+
+        .info-card p {
+            color: #0038A8;
+            font-size: 17px;
+            font-weight: bold;
+            margin: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .red {
+            border-left-color: #CE1126;
+        }
+
+        .green {
+            border-left-color: #239B56;
+        }
+
+        .purple {
+            border-left-color: #805AD5;
+        }
+
+        .orange {
+            border-left-color: #E89520;
+        }
+
+        .blue {
+            border-left-color: #1677D2;
+        }
+
+        .yellow {
+            border-left-color: #E0B000;
+        }
+
         .buttons {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
         }
+
         .buttons a {
             display: inline-block;
             background-color: #0038A8;
             color: white;
-            padding: 12px 25px;
+            padding: 12px 28px;
             margin: 5px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.3s;
         }
+
+        .buttons a:hover {
+            background-color: #1677D2;
+            transform: translateY(-2px);
+        }
+
         footer {
             background-color: #0038A8;
             color: white;
             text-align: center;
             padding: 15px;
+            border-top: 4px solid #52D6F4;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+                padding: 15px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h2 {
+                font-size: 22px;
+            }
         }
     </style>
 </head>
 
-<body style="background-color:#F0FFF0; font-family:Arial;">
+<body>
 
     <header>
-        <h2><b>STUDENT INFORMATION</b></h2>
+        <h2>STUDENT INFORMATION</h2>
         <h3><i>COMPUTER ACTIVITY</i></h3>
     </header>
 
-    <br>
+    <div class="container">
 
-    <div style="background-color:#E6E6FA; width:80%; padding:20px; border:2px solid #CE1126; margin:auto;">
+        <h2 class="title">MY PROFILE</h2>
 
-        <h2 style="color:#0038A8;">INFORMATION:</h2>
+        <div class="profile">
 
-        <div style="background-color:gray; padding:20px; border-radius:10px;">
+            <img src="https://drive.google.com/thumbnail?id=1oHw3pjcLD7WFy_J7QDmwxaoIhAw2LhRV&sz=w1000"
+                 alt="Student Picture">
 
-            <center>
+            <h2>Charlie B. Ramos</h2>
 
-                <h2 style="color:red;">NAME: Charlie B. Ramos</h2>
-                
-                <h2 style="color:red;">BLOOD TYPE: Type O </h2>
+        </div>
 
-                <h3 style="color:Blue;">
-                    <b>SECTION: Grade 9 - Galatians</b>
-                </h3>
+        <h2 class="title">PERSONAL DETAILS</h2>
 
-                <h3 style="color:Blue;">
-                    SY: 2026-2027
-                </h3>
+        <div class="info-grid">
 
-                <h4 style="color:green;">
-                    AGE: 13 years old
-                </h4>
+            <div class="info-card red">
+                <h4>FULL NAME</h4>
+                <p>Charlie B. Ramos</p>
+            </div>
 
-                <h4 style="color:green;">
-                    DATE OF BIRTH: November 12, 2012
-                </h4>
+            <div class="info-card green">
+                <h4>AGE</h4>
+                <p>13 years old</p>
+            </div>
 
-                <h5 style="color:purple;">
-                    RELIGION: Catholic
-                </h5>
+            <div class="info-card purple">
+                <h4>DATE OF BIRTH</h4>
+                <p>November 12, 2012</p>
+            </div>
 
-                <h6 style="color:yellow;">
-                    GENDER: Male
-                </h6>
+            <div class="info-card orange">
+                <h4>BLOOD TYPE</h4>
+                <p>Type O</p>
+            </div>
 
-                <h6 style="color:yellow;">
-                    PRONOUNS: He/Him
-                </h6>
+            <div class="info-card">
+                <h4>GRADE & SECTION</h4>
+                <p>Grade 9 - Galatians</p>
+            </div>
 
-                <br><br>
+            <div class="info-card green">
+                <h4>SCHOOL YEAR</h4>
+                <p>2026-2027</p>
+            </div>
 
-                <img src="https://drive.google.com/thumbnail?id=1oHw3pjcLD7WFy_J7QDmwxaoIhAw2LhRV&sz=w1000"
-                     width="270" height="200">
+            <div class="info-card purple">
+                <h4>RELIGION</h4>
+                <p>Catholic</p>
+            </div>
 
-            </center>
+            <div class="info-card red">
+                <h4>GENDER</h4>
+                <p>Male</p>
+            </div>
+
+            <div class="info-card orange">
+                <h4>PRONOUNS</h4>
+                <p>He/Him</p>
+            </div>
+
+            <div class="info-card blue">
+                <h4>HOBBIES</h4>
+                <p>Playing games and watching shows</p>
+            </div>
+
+            <div class="info-card yellow">
+                <h4>FAVORITE GAME</h4>
+                <p>Mobile Legends: Bang Bang</p>
+            </div>
 
         </div>
 
@@ -96,7 +278,7 @@
     </div>
 
     <footer>
-        <p><b>COMPUTER ACTIVITY</b></p>
+        <p><b>COMPUTER </b></p>
         <p>Grade 9 - Galatians | SY: 2026-2027</p>
     </footer>
 
