@@ -1,82 +1,181 @@
+
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Superheroes</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-
-            /* CSS Background Properties */
+            color: #172536;
             background-color: #101820;
-            background-image: url("superhero.jpg");
+            background-image: linear-gradient(rgba(16, 24, 32, 0.65), rgba(16, 24, 32, 0.75)), url("superhero.jpg");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
+            background-position: center;
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.85);
+            background: linear-gradient(135deg, #101820, #27364B);
             color: white;
             text-align: center;
-            padding: 25px;
+            padding: 30px 20px;
+            border-bottom: 5px solid #E63946;
         }
 
         header h1 {
             margin: 0;
             font-size: 40px;
+            letter-spacing: 3px;
+        }
+
+        header p {
+            color: #FFCF70;
+            margin-bottom: 0;
+            font-size: 17px;
         }
 
         main {
-            background-color: rgba(255, 255, 255, 0.92);
-            width: 80%;
-            margin: 40px auto;
+            width: 85%;
+            max-width: 1000px;
+            margin: 35px auto;
             padding: 30px;
+            background-color: rgba(255, 255, 255, 0.96);
+            border: 3px solid #FFB703;
             border-radius: 15px;
-            text-align: center;
+            box-shadow: 0 5px 20px #00000040;
         }
 
-        main h2 {
-            color: #1d3557;
+        .title {
+            color: #1D3557;
+            background-color: #EAF0F7;
+            padding: 13px 15px;
+            border-left: 5px solid #E63946;
+            border-radius: 6px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin: 15px 5px;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #D7DEE8;
+            margin: 30px auto;
+        }
+
+        .hero-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 20px;
         }
 
         .hero {
-            display: inline-block;
-            width: 25%;
-            margin: 10px;
+            background-color: #F2F5F9;
             padding: 20px;
-            background-color: #eeeeee;
+            border: 1px solid #D7DEE8;
+            border-top: 5px solid #E63946;
             border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .hero:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 12px #00000020;
+            border-top-color: #FFB703;
+        }
+
+        .hero h3 {
+            color: #1D3557;
+            font-size: 21px;
+            margin-top: 5px;
+        }
+
+        .hero p {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .hero-info {
+            background-color: #FFF4D6;
+            padding: 18px;
+            border-left: 5px solid #FFB703;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        .hero-info p {
+            margin: 5px;
         }
 
         .bottom-nav {
-            background-color: rgba(0, 0, 0, 0.85);
             text-align: center;
             padding: 20px;
         }
 
         .button {
             display: inline-block;
-            background-color: #e63946;
+            background-color: #E63946;
             color: white;
-            padding: 12px 30px;
+            padding: 12px 28px;
             margin: 5px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         .button:hover {
-            background-color: #ffb703;
-            color: black;
+            background-color: #FFB703;
+            color: #101820;
+            transform: translateY(-3px);
         }
 
         footer {
-            background-color: rgba(0, 0, 0, 0.95);
+            background-color: #101820;
             color: white;
             text-align: center;
             padding: 15px;
+            border-top: 4px solid #E63946;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            main {
+                width: 92%;
+                padding: 18px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            .hero-list {
+                grid-template-columns: 1fr;
+            }
+
+            p {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
@@ -89,33 +188,127 @@
     </header>
 
     <main>
-        <h2>About Superheroes</h2>
+
+        <h2 class="title">About Superheroes</h2>
 
         <p>
             Superheroes are fictional characters known for their special
             abilities, courage, and determination. They use their powers
-            to protect people and fight against evil.
+            and skills to protect people, fight crime, and stand up for
+            what is right.
         </p>
 
-        <h2>Popular Superheroes</h2>
+        <p>
+            Superhero stories are popular because they show the importance
+            of bravery, responsibility, teamwork, and helping others.
+            They remind us that even ordinary people can make a difference.
+        </p>
 
-        <div class="hero">
-            <h3>Superman</h3>
-            <p>The Man of Steel and one of the most iconic superheroes.</p>
+        <hr>
+
+        <h2 class="title">Popular Superheroes</h2>
+
+        <p>
+            Here are three well-known superheroes with different abilities
+            and ways of protecting people.
+        </p>
+
+        <div class="hero-list">
+
+            <div class="hero">
+                <h3>Superman</h3>
+
+                <p>
+                    Superman is a hero from the planet Krypton who protects
+                    people on Earth.
+                </p>
+
+                <p>
+                    <b>Known For:</b><br>
+                    Super strength, flight, and heat vision
+                </p>
+            </div>
+
+            <div class="hero">
+                <h3>Spider-Man</h3>
+
+                <p>
+                    Spider-Man is a young hero who uses his special abilities
+                    to protect his city and help people in danger.
+                </p>
+
+                <p>
+                    <b>Known For:</b><br>
+                    Wall climbing, web-slinging, and quick reflexes
+                </p>
+            </div>
+
+            <div class="hero">
+                <h3>Batman</h3>
+
+                <p>
+                    Batman protects Gotham City by using his intelligence,
+                    detective skills, training, and technology.
+                </p>
+
+                <p>
+                    <b>Known For:</b><br>
+                    Detective skills, gadgets, and strategy
+                </p>
+            </div>
+
         </div>
 
-        <div class="hero">
-            <h3>Spider-Man</h3>
-            <p>A hero who uses his powers to protect his city.</p>
+        <hr>
+
+        <h2 class="title">What Makes a Great Hero?</h2>
+
+        <p>
+            Being a hero is not only about having superpowers.
+            A great hero also shows good character and makes
+            responsible decisions.
+        </p>
+
+        <div class="hero-info">
+            <p>
+                <b>Courage:</b> Facing challenges and doing what is right,
+                even when it is difficult.
+            </p>
+
+            <p>
+                <b>Responsibility:</b> Understanding that our actions can
+                affect other people.
+            </p>
+
+            <p>
+                <b>Kindness:</b> Helping others and treating people with
+                respect.
+            </p>
+
+            <p>
+                <b>Teamwork:</b> Working together to solve problems and
+                achieve a common goal.
+            </p>
         </div>
 
-        <div class="hero">
-            <h3>Batman</h3>
-            <p>A hero who fights crime using intelligence and technology.</p>
-        </div>
+        <hr>
+
+        <h2 class="title">Superheroes in Real Life</h2>
+
+        <p>
+            Although fictional superheroes have extraordinary powers,
+            real-life heroes can be found in our communities. Doctors,
+            nurses, firefighters, teachers, rescuers, and other people
+            help protect lives and make our communities better.
+        </p>
+
+        <p>
+            We may not have superpowers, but we can still be heroes by
+            helping others, being honest, following what is right,
+            and making a positive difference in someone's life.
+        </p>
+
     </main>
-
-    <hr>
 
     <div class="bottom-nav">
         <a href="page5.html" class="button">Previous</a>
@@ -123,8 +316,10 @@
     </div>
 
     <footer>
-        <p>Created by: Charlie | Activity 3: CSS Background</p>
+        <p><b>COMPUTER</b></p>
+        <p>Grade 9 - Galatians | SY: 2026-2027</p>
     </footer>
 
 </body>
+
 </html>
