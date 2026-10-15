@@ -1,126 +1,255 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>My Fridge</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
         body {
             background-color: lightcyan;
+            margin: 0;
             color: #174A5C;
-            font-family: Arial;
-            text-align: center;
         }
 
         header {
-            background-color: #176B87;
+            background: linear-gradient(135deg, #176B87, #2196A6);
             color: white;
-            padding: 20px;
-            margin-bottom: 25px;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 5px solid #80DEEA;
         }
 
-        img {
-            width: 300px;
-            border: 5px groove #4A90E2;
+        header h1 {
+            color: white;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            color: #D9F9FF;
+            margin-bottom: 0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 950px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border: 2px solid #B2DFDB;
             border-radius: 15px;
+            box-shadow: 0 5px 15px #00000015;
+            text-align: center;
         }
 
-        h1 {
-            color: #176B87;
+        .fridge-img {
+            display: block;
+            width: 350px;
+            max-width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin: 5px auto;
+            border: 6px groove #2196A6;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #00000020;
+            transition: 0.3s;
         }
 
-        h2 {
+        .fridge-img:hover {
+            transform: scale(1.02);
+        }
+
+        .title {
             color: #176B87;
+            background-color: #E0F7FA;
+            padding: 12px 15px;
+            border-left: 5px solid #176B87;
+            border-radius: 6px;
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 15px;
         }
 
         p {
-            width: 60%;
-            margin: auto;
-            line-height: 1.5;
+            font-size: 16px;
+            line-height: 1.8;
+            margin: 15px 5px;
         }
 
         hr {
-            width: 80%;
-            border: 1px solid green;
+            border: none;
+            height: 2px;
+            background-color: #80CBC4;
             margin: 25px auto;
         }
-        
+
+        .fact {
+            background-color: #E0F7FA;
+            padding: 15px;
+            border-left: 5px solid #2196A6;
+            border-radius: 6px;
+            margin: 25px 0;
+            text-align: left;
+        }
+
+        .fact p {
+            margin: 5px;
+        }
+
+        .bottom-nav {
+            text-align: center;
+            padding: 20px;
+        }
+
         .button {
             display: inline-block;
-            background-color: #2196f3;
+            background-color: #176B87;
             color: white;
-            padding: 12px 30px;
+            padding: 12px 28px;
             margin: 5px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         .button:hover {
-            background-color: #ffb703;
-            color: black;
+            background-color: #2196A6;
+            transform: translateY(-3px);
         }
 
         footer {
             background-color: #176B87;
             color: white;
+            text-align: center;
             padding: 15px;
-            margin-top: 30px;
+            border-top: 4px solid #80DEEA;
+            margin-top: 25px;
         }
 
+        footer p {
+            margin: 5px;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .fridge-img {
+                height: 250px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1 style="color: white;">THE REFRIGERATOR</h1>
+        <h1>THE REFRIGERATOR</h1>
         <p>Keeping Food Fresh and Cool</p>
     </header>
 
-    <img src="https://images.pexels.com/photos/5825422/pexels-photo-5825422.jpeg"
-         alt="Refrigerator">
+    <div class="container">
 
-    <hr>
+        <img class="fridge-img"
+             src="https://images.pexels.com/photos/5825422/pexels-photo-5825422.jpeg"
+             alt="Refrigerator">
 
-    <h2>Why is a Refrigerator Important?</h2>
+        <hr>
 
-    <p>
-        A refrigerator is an important appliance in our homes.
-        It keeps food and drinks cold and helps slow down food spoilage.
-        Because of this, food can stay fresh for a longer period of time.
-    </p>
+        <h2 class="title">Why Is a Refrigerator Important?</h2>
 
-    <hr>
+        <p>
+            A refrigerator is an important appliance in our homes.
+            It keeps food and drinks cold and helps slow down food spoilage.
+            Because of this, food can stay fresh for a longer period of time.
+        </p>
 
-    <h2>Who Invented the Refrigerator?</h2>
+        <p>
+            It also helps preserve items such as milk, fruits, vegetables,
+            meat, and leftovers. Keeping these foods at a safe temperature
+            helps slow the growth of many harmful bacteria.
+        </p>
 
-    <p>
-        The refrigerator was developed through the work of several inventors.
-        William Cullen demonstrated an early artificial refrigeration device
-        in 1748. Later, Jacob Perkins patented an early practical
-        vapor-compression refrigeration machine in 1834.
-    </p>
+        <hr>
 
-    <hr>
+        <h2 class="title">Who Invented the Refrigerator?</h2>
 
-    <h2>Why We Need It</h2>
+        <p>
+            The refrigerator was developed through the work of several inventors.
+            William Cullen demonstrated an early artificial refrigeration device
+            in 1748. Later, Jacob Perkins patented an early practical
+            vapor-compression refrigeration machine in 1834.
+        </p>
 
-    <p>
-        Refrigerators help us store food safely and reduce food waste.
-        They are now commonly found in homes, restaurants, stores, and other places.
-    </p>
-    
+        <p>
+            Over time, refrigeration technology improved, making refrigerators
+            more practical for everyday use. They eventually became common
+            household appliances.
+        </p>
+
+        <hr>
+
+        <h2 class="title">How Does a Refrigerator Work?</h2>
+
+        <p>
+            A refrigerator removes heat from its inside and releases it
+            into the surrounding air. It uses a special substance called
+            a refrigerant that circulates through the cooling system.
+            This process helps keep the inside of the refrigerator cold.
+        </p>
+
+        <hr>
+
+        <h2 class="title">Why Do We Need It?</h2>
+
+        <p>
+            Refrigerators help us store food safely and reduce food waste.
+            They are now commonly found in homes, restaurants, stores,
+            and other places.
+        </p>
+
+        <div class="fact">
+            <p>
+                <b>Fun Fact:</b> Refrigerators do not make food last forever.
+                Food can still spoil, so it is important to keep the correct
+                temperature and use stored food within a safe period.
+            </p>
+        </div>
+
+    </div>
+
     <div class="bottom-nav">
         <a href="page4.html" class="button">Previous</a>
         <a href="page6.html" class="button">Next</a>
     </div>
 
     <footer>
-        <p>Created by a Charlie | Activity 2 : CSS Border</p>
+        <p><b>COMPUTER</b></p>
+        <p>Grade 9 - Galatians | SY: 2026-2027</p>
     </footer>
 
 </body>
+
 </html>
-
-
