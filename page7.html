@@ -1,114 +1,237 @@
+
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>My Favorite Hobby</title>
+    <title>My Favorite Hobbies</title>
 
     <style>
-        body {
-            background-color: lightblue;
+        * {
+            box-sizing: border-box;
             font-family: Arial;
         }
 
-       
-        .header {
-            background-color: navy;
-            color: white;
-            text-align: center;
-            margin: 20px;
-            border: 3px solid black;
-            padding: 20px;
+        body {
+            background-color: #EAF6FF;
+            margin: 0;
+            color: #17324D;
         }
 
-        
-        .content {
-            background-color: white;
-            margin: 30px;
-            border: 2px solid blue;
+        header {
+            background: linear-gradient(135deg, #0038A8, #2878C8);
+            color: white;
+            text-align: center;
             padding: 25px;
+            border-bottom: 5px solid #8ED6FF;
         }
 
-        
+        header h1 {
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            color: #D6EEFF;
+            margin-bottom: 0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 950px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border: 2px solid #B7D9F5;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #00000015;
+        }
+
+        .title {
+            color: #0038A8;
+            background-color: #E5F2FF;
+            padding: 12px 15px;
+            border-left: 5px solid #2878C8;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin: 15px 5px;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #B7D9F5;
+            margin: 25px auto;
+        }
+
         .hobby {
-            background-color: lightyellow;
-            margin: 15px;
-            border: 2px dashed orange;
-            padding: 15px;
+            background-color: #F1F8FF;
+            margin: 20px 0;
+            border: 2px solid #B7D9F5;
+            border-radius: 10px;
+            padding: 18px;
         }
 
-        
-        .footer {
-            background-color: navy;
-            color: white;
-            text-align: center;
-            margin: 20px;
-            border: 3px solid black;
-            padding: 15px;
+        .hobby h3 {
+            color: #174A7E;
+            margin-top: 5px;
+        }
+
+        .hobby p {
+            margin-bottom: 5px;
+        }
+
+        ul {
+            line-height: 1.9;
+            padding-left: 25px;
         }
 
         .bottom-nav {
-            background-color: navy;
             text-align: center;
             padding: 20px;
-            margin: 20px;
-            border: 3px solid black;
         }
 
         .button {
             display: inline-block;
-            background-color: blue;
+            background-color: #0038A8;
             color: white;
-            padding: 12px 30px;
+            padding: 12px 28px;
             margin: 5px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         .button:hover {
-            background-color: lightblue;
-            color: black;
+            background-color: #2878C8;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background-color: #0038A8;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-top: 4px solid #8ED6FF;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            p {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="header">
-        <h1>My Favorite Hobby</h1>
-        <p>Playing Video Games</p>
-    </div>
+    <header>
+        <h1>MY FAVORITE HOBBIES</h1>
+        <p>Things I Enjoy Doing in My Free Time</p>
+    </header>
 
-    <div class="content">
-        <h2>Why I Like Video Games</h2>
+    <div class="container">
+
+        <h2 class="title">Playing Video Games</h2>
 
         <p>
-            Playing video games is one of my favorite hobbies.
-            I like playing games because they are fun and help me
-            relax after doing my school work.
+            Playing video games is one of my favorite hobbies because
+            it is fun and helps me relax after doing my schoolwork.
+            Gaming also gives me something enjoyable to do during my
+            free time, especially when I want a break from my daily routine.
         </p>
 
         <div class="hobby">
-            <h3>My Favorite Things About Gaming</h3>
-            <ul>
-                <li>It is fun and entertaining.</li>
-                <li>I can play with my friends.</li>
-                <li>It helps improve my problem-solving skills.</li>
-                <li>I can discover new games and challenges.</li>
-            </ul>
+            <h3>Why I Enjoy Gaming</h3>
+
+            <p>
+                I enjoy video games because they challenge me to think,
+                solve problems, and make decisions. Some games also allow
+                me to explore new worlds, be creative, and play with my
+                friends. For me, gaming is not just about winning; it is
+                also about enjoying the experience and learning along the way.
+            </p>
         </div>
 
         <div class="hobby">
             <h3>My Favorite Game</h3>
+
             <p>
-                One of my favorite games is Minecraft. I enjoy
-                building houses, exploring different places, and
-                playing with my friends.
+                One of my favorite games is Minecraft. I enjoy building
+                houses, exploring different places, collecting resources,
+                and creating things in my own way. I also like that I can
+                play with friends and work together on different projects.
             </p>
         </div>
-    </div>
 
-    <div class="footer">
-        <p>Created by a Charlie | CSS Box Model Activity 4</p>
+        <hr>
+
+        <h2 class="title">Watching Dramas and Shows</h2>
+
+        <p>
+            Another hobby I enjoy is watching dramas and shows. I like
+            following different stories, getting interested in the characters,
+            and finding out what happens next. Watching shows is also a
+            relaxing way to spend my free time.
+        </p>
+
+        <div class="hobby">
+            <h3>Where I Watch</h3>
+
+            <p>
+                I watch dramas and shows on different platforms, including
+                TikTok, Netflix, and other apps or websites. TikTok is useful
+                for discovering short clips and interesting scenes, while
+                streaming platforms like Netflix let me watch full episodes
+                and follow a story in more detail.
+            </p>
+        </div>
+
+        <div class="hobby">
+            <h3>What I Am Watching Now</h3>
+
+            <p>
+                Right now, I am watching AI drama shows on an app called
+                PineDrama. These shows are interesting to me because they
+                use AI-generated content to present dramatic stories.
+                I enjoy discovering different plots and seeing how the
+                stories develop from one scene to the next.
+            </p>
+        </div>
+
+        <hr>
+
+        <h2 class="title">Why These Hobbies Matter to Me</h2>
+
+        <p>
+            Playing games and watching dramas give me different ways to
+            enjoy my free time. Gaming lets me take part in challenges and
+            use my creativity, while watching shows lets me follow stories
+            and relax. Both hobbies help make my free time more enjoyable,
+            as long as I balance them with schoolwork, sleep, and other
+            responsibilities.
+        </p>
+
     </div>
 
     <div class="bottom-nav">
@@ -116,6 +239,11 @@
         <a href="page8.html" class="button">Next</a>
     </div>
 
-</body>
-</html>
+    <footer>
+        <p><b>COMPUTER</b></p>
+        <p>Grade 9 - Galatians | SY: 2026-2027</p>
+    </footer>
 
+</body>
+
+</html>
