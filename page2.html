@@ -1,143 +1,230 @@
-
 <!DOCTYPE html>
-
 <html>
 
 <head>
     <title>Nutrition Month</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial;
+        }
 
-<style>
-    .nav-button {
-        display: inline-block;
-        padding: 12px 25px;
-        margin: 5px;
-        background-color: #2E8B57;
-        color: white;
-        text-decoration: none;
-        font-family: Arial;
-        font-weight: bold;
-        border-radius: 8px;
-    }
+        body {
+            background-color: #F0FFF0;
+            margin: 0;
+            color: #243D2B;
+        }
 
-    .nav-button:hover {
-        background-color: #3CB371;
-    }
-</style>
+        header {
+            background-color: #2E8B57;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #90EE90;
+        }
 
+        header h1 {
+            margin: 0;
+            letter-spacing: 2px;
+        }
 
+        header h3 {
+            margin-bottom: 0;
+            font-weight: normal;
+            color: #D8F5D0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 950px;
+            margin: 30px auto;
+            background-color: #E6FFE6;
+            padding: 25px;
+            border: 2px solid #2E8B57;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #00000015;
+            text-align: center;
+        }
+
+        .title {
+            color: #2E8B57;
+            background-color: #D5F5D5;
+            padding: 12px;
+            border-left: 5px solid #2E8B57;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        .content-img {
+            width: 350px;
+            max-width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border: 4px solid white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #00000020;
+            margin-top: 5px;
+            transition: 0.3s;
+        }
+
+        .content-img:hover {
+            transform: scale(1.02);
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 15px 5px;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #A5D6A7;
+            width: 70%;
+            margin: 25px auto;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 5px;
+            background-color: #2E8B57;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #3CB371;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background-color: #2E8B57;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-top: 4px solid #90EE90;
+            margin-top: 25px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .content-img {
+                height: 200px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    </style>
 </head>
 
-<body style="background-color:#F0FFF0; font-family:Arial;">
+<body>
 
-
-<div style="background-color:#2E8B57; color:white; padding:20px;">
-    <center>
+    <header>
         <h1>NUTRITION MONTH</h1>
         <h3><i>Healthy Diet, Healthy Life</i></h3>
-    </center>
-</div>
+    </header>
 
-<br>
+    <div class="container">
 
-<div style="background-color:#E6FFE6; width:80%; padding:20px; border:2px solid #2E8B57; margin:auto;">
+        <h2 class="title">What is Nutrition Month?</h2>
+
+        <img class="content-img"
+             src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+             alt="Healthy food">
+
+        <p>
+            Nutrition Month is celebrated every July in the Philippines.
+            It reminds everyone to eat healthy foods and practice good eating habits to live a healthier life.
+        </p>
+
+        <hr>
+
+        <h2 class="title">Balanced Diet</h2>
+
+        <img class="content-img"
+             src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg"
+             alt="Balanced diet">
+
+        <p>
+            A balanced diet includes the right amount of carbohydrates,
+            protein, fruits, vegetables, and healthy fats. Eating a variety
+            of foods every day helps our body get the nutrients it needs to
+            grow, stay active, and remain healthy.
+        </p>
+
+        <hr>
+
+        <h2 class="title">Healthy Foods</h2>
+
+        <img class="content-img"
+             src="https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg"
+             alt="Healthy foods">
+
+        <p>
+            Fruits, vegetables, fish, eggs, milk, rice, and other nutritious foods help our body become stronger and protect us from sickness.
+        </p>
+
+        <hr>
+
+        <h2 class="title">Healthy Lifestyle</h2>
+
+        <img class="content-img"
+             src="https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg"
+             alt="Healthy lifestyle">
+
+        <p>
+            Eating healthy meals, drinking enough water, exercising,
+            and getting enough sleep are simple ways to stay healthy every day.
+        </p>
+
+        <hr>
+
+        <h2 class="title">Conclusion</h2>
+
+        <p>
+            Good nutrition is important for every student. A healthy body
+            helps us study better, stay active, and enjoy life with our
+            family and friends.
+        </p>
+
+    </div>
 
     <center>
+        <a href="page1.html" class="nav-button">
+            Previous
+        </a>
 
-        <h2 style="color:#2E8B57;">What is Nutrition Month?</h2>
-
-        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
-        width="350" height="220">
-
-        <br><br>
-
-        <p>
-
-
-Nutrition Month is celebrated every July in the Philippines.
-It reminds everyone to eat healthy foods and practice good eating habits to live a healthier life. </p>
-
-
-        <hr width="70%">
-
-        <h2 style="color:#2E8B57;">Balanced Diet</h2>
-
-        <img src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg"
-        width="350" height="220">
-
-        <br><br>
-
-        <p>
-
-
-A balanced diet includes the right amount of carbohydrates,
-protein, fruits, vegetables, and healthy fats. Eating a variety
-of foods every day helps our body get the nutrients it needs to
-grow, stay active, and remain healthy. </p>
-
-
-        <hr width="70%">
-
-        <h2 style="color:#2E8B57;">Healthy Foods</h2>
-
-        <img src="https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg"
-        width="350" height="220">
-
-        <br><br>
-
-        <p>
-
-
-Fruits, vegetables, fish, eggs, milk, rice, and other nutritious foods help our body become stronger and protect us from sickness. </p>
-
-
-        <hr width="70%">
-
-        <h2 style="color:#2E8B57;">Healthy Lifestyle</h2>
-
-        <img src="https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg"
-        width="350" height="220">
-
-        <br><br>
-
-        <p>
-
-
-Eating healthy meals, drinking enough water, exercising,
-and getting enough sleep are simple ways to stay healthy every day. </p>
-
-        <hr width="70%">
-
-        <h2 style="color:#2E8B57;">Conclusion</h2>
-
-        <p>
-
-
-Good nutrition is important for every student. A healthy body
-helps us study better, stay active, and enjoy life with our
-family and friends. </p>
-
+        <a href="page3.html" class="nav-button">
+            Next
+        </a>
     </center>
 
-</div>
+    <br>
 
-<br>
-
-<center>
-
-    <a href="page1.html" class="nav-button">
-        Go Back to Page 1
-    </a>
-
-    <a href="page3.html" class="nav-button">
-        Go to Page 3
-    </a>
-
-</center>
-
-<br>
-<br>
-
+    <footer>
+        <p><b>COMPUTER</b></p>
+        <p>Grade 9 - Galatians | SY: 2026-2027</p>
+    </footer>
 
 </body>
 </html>
