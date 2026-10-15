@@ -1,4 +1,6 @@
+<!DOCTYPE html>
 <html>
+
 <head>
     <title>Where Did the Days of the Week Come From?</title>
 
@@ -10,38 +12,106 @@
 
         body {
             background-color: #EAF6FF;
+            margin: 0;
             color: #17365D;
-            margin: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #164A8A, #1E65A8);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 5px solid #D4AF37;
+        }
+
+        header h1 {
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            color: #D9ECFF;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 950px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border: 2px solid #C9DDF0;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #00000015;
+        }
+
+        .title {
+            color: #164A8A;
+            background-color: #E1F0FF;
+            padding: 12px 15px;
+            border-left: 5px solid #164A8A;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        .important {
+            background-color: #D4ECFF;
+            padding: 20px;
+            border: 2px solid #4A90D9;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .important h2 {
+            color: #164A8A;
+            margin-top: 0;
         }
 
         p {
             font-size: 16px;
-            line-height: 1.5;
+            line-height: 1.8;
+            margin: 15px 5px;
         }
 
-        #important {
-            background-color: #D4ECFF;
-            padding: 20px;
-            border: 3px solid #4A90D9;
-            border-radius: 12px;
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #D4AF37;
+            margin: 25px auto;
         }
 
-        .header {
-            text-align: center;
-            padding: 20px;
-            background-color: #164A8A;
-            color: white;
-            border: 3px solid #D4AF37;
-            border-radius: 12px;
-        }
-
-        .footer {
-            text-align: center;
+        .fact {
+            background-color: #FFF8D9;
             padding: 15px;
-            background-color: #164A8A;
-            color: white;
-            border: 3px solid #D4AF37;
-            border-radius: 12px;
+            border-left: 5px solid #D4AF37;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .day-card {
+            background-color: #F5F9FF;
+            padding: 15px;
+            border: 1px solid #D5E3F5;
+            border-left: 5px solid #1E65A8;
+            border-radius: 8px;
+            margin: 12px 0;
+            transition: 0.3s;
+        }
+
+        .day-card:hover {
+            background-color: #EAF3FF;
+            transform: translateY(-2px);
+        }
+
+        .day-card h3 {
+            color: #164A8A;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .day-card p {
+            margin: 0;
         }
 
         .bottom-nav {
@@ -51,98 +121,238 @@
 
         .button {
             display: inline-block;
-            background-color: #1E65A8;
+            background-color: #164A8A;
             color: white;
-            padding: 12px 25px;
+            padding: 12px 28px;
             margin: 5px;
             text-decoration: none;
-            border: 2px solid #D4AF37;
             border-radius: 8px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         .button:hover {
-            background-color: #D4AF37;
-            color: #17365D;
+            background-color: #1E65A8;
+            transform: translateY(-3px);
         }
 
-        h2 {
-            color: #164A8A;
+        footer {
+            background-color: #164A8A;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-top: 4px solid #D4AF37;
+            margin-top: 25px;
         }
 
-        hr {
-            border: none;
-            border-top: 2px solid #D4AF37;
-            margin: 25px 0;
+        footer p {
+            margin: 5px;
+            color: white;
         }
 
-        center p {
-            color: #285B88;
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            .important {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="header">
-        <h1>Where Did the Days of the Week Come From?</h1>
-    </div>
-
-    <center>
+    <header>
         <h1>Where Did the Days of the Week Come From?</h1>
         <p>A short look at the history behind the names of our days.</p>
-    </center>
+    </header>
 
-    <hr>
+    <div class="container">
 
-    <h2>How Did They Get Their Names?</h2>
-
-    <p>
-        The names of the seven days come from a mix of ancient Roman
-        and Germanic traditions. People connected different days with
-        the Sun, Moon, planets, and gods.
-    </p>
-
-    <div id="important">
-        <h2>The Days of the Week</h2>
+        <h2 class="title">How Did They Get Their Names?</h2>
 
         <p>
-            <b>Sunday</b> came from the Sun, while <b>Monday</b> came from
-            the Moon. <b>Tuesday</b> was connected to the Norse god Tyr,
-            and <b>Wednesday</b> was connected to Odin or Woden.
+            The names of the seven days come from a mix of ancient Roman
+            and Germanic traditions. People connected different days with
+            the Sun, Moon, planets, and gods.
         </p>
 
         <p>
-            <b>Thursday</b> was named after Thor, and <b>Friday</b> was
-            connected to the goddess Frigg. <b>Saturday</b> came from
-            Saturn, a Roman god.
+            The seven-day week developed over thousands of years. Ancient
+            civilizations observed the movements of the Sun, Moon, and
+            visible planets and used them to organize time. As cultures
+            traded, traveled, and influenced one another, their traditions
+            helped shape the names we use today.
         </p>
+
+        <hr>
+
+        <div class="important">
+
+            <h2>The Days of the Week</h2>
+
+            <p>
+                <b>Sunday</b> came from the Sun, while <b>Monday</b> came from
+                the Moon. <b>Tuesday</b> was connected to the Norse god Tyr,
+                and <b>Wednesday</b> was connected to Odin or Woden.
+            </p>
+
+            <p>
+                <b>Thursday</b> was named after Thor, and <b>Friday</b> was
+                connected to the goddess Frigg. <b>Saturday</b> came from
+                Saturn, a Roman god.
+            </p>
+
+        </div>
+
+        <h2 class="title">The Meaning Behind Each Day</h2>
+
+        <p>
+            Each day has a name with a story behind it. Here is a closer
+            look at the origins and associations of the seven days.
+        </p>
+
+        <div class="day-card">
+            <h3>Sunday - The Sun</h3>
+            <p>
+                Sunday is associated with the Sun. Its English name comes
+                from the Old English word meaning "day of the Sun."
+                The Sun has been important to many ancient cultures because
+                it provides light and warmth.
+            </p>
+        </div>
+
+        <div class="day-card">
+            <h3>Monday - The Moon</h3>
+            <p>
+                Monday takes its name from the Moon. Ancient people observed
+                the changing appearance of the Moon and used its cycles
+                to help measure time.
+            </p>
+        </div>
+
+        <div class="day-card">
+            <h3>Tuesday - Tyr</h3>
+            <p>
+                Tuesday is named after Tyr, a god associated with war and
+                courage in Norse mythology. The English name reflects the
+                influence of Germanic traditions.
+            </p>
+        </div>
+
+        <div class="day-card">
+            <h3>Wednesday - Woden</h3>
+            <p>
+                Wednesday is associated with Woden, another name for Odin,
+                a major god in Germanic and Norse traditions. Odin was
+                associated with wisdom, knowledge, and poetry.
+            </p>
+        </div>
+
+        <div class="day-card">
+            <h3>Thursday - Thor</h3>
+            <p>
+                Thursday comes from the name of Thor, the Norse god
+                associated with thunder. Thor is often described as a
+                protector in Norse mythology.
+            </p>
+        </div>
+
+        <div class="day-card">
+            <h3>Friday - Frigg</h3>
+            <p>
+                Friday is traditionally associated with Frigg, a goddess
+                in Norse mythology connected with marriage and the home.
+                The history of the name reflects ancient Germanic beliefs.
+            </p>
+        </div>
+
+        <div class="day-card">
+            <h3>Saturday - Saturn</h3>
+            <p>
+                Saturday takes its English name from Saturn, a Roman god
+                associated with agriculture and time. It is the only
+                English day name that directly preserves the name of a
+                Roman deity.
+            </p>
+        </div>
+
+        <hr>
+
+        <h2 class="title">Why Do We Have Seven Days in a Week?</h2>
+
+        <p>
+            One reason for the seven-day week is its connection to the
+            approximate length of a lunar phase, which lasts about seven
+            days. Ancient people also recognized seven prominent celestial
+            bodies: the Sun, Moon, Mars, Mercury, Jupiter, Venus, and Saturn.
+        </p>
+
+        <p>
+            Over time, the seven-day week became widely used for organizing
+            daily life, religious observances, work, and rest. Today, it is
+            an important part of calendars around the world.
+        </p>
+
+        <hr>
+
+        <h2 class="title">Why Are the Days Important Today?</h2>
+
+        <p>
+            The days of the week help us organize our schedules and manage
+            our time. We use them to plan school activities, work, family
+            events, holidays, and other responsibilities.
+        </p>
+
+        <p>
+            Learning about the origins of the days also helps us understand
+            how ancient cultures influenced modern language and traditions.
+            Even ordinary words can carry stories from thousands of years ago.
+        </p>
+
+        <hr>
+
+        <div class="fact">
+            <p>
+                <b>Fun Fact:</b> The seven-day week has been used for
+                thousands of years, and the English names of the days
+                preserve traces of ancient Roman and Germanic beliefs.
+            </p>
+        </div>
+
+        <h2 class="title">Conclusion</h2>
+
+        <p>
+            The names of the days of the week are more than just words
+            used in our calendars. They reflect the beliefs, observations,
+            and traditions of people who lived long ago. By learning their
+            history, we can better appreciate how ancient civilizations
+            helped shape the language and routines we use today.
+        </p>
+
     </div>
-
-    <hr>
-
-    <h2>Was There One Person Who Invented Them?</h2>
-
-    <p>
-        No. The names were not invented by one person. They developed
-        over a very long time as different cultures influenced each other.
-        The names we use today are the result of those old traditions.
-    </p>
-
-    <hr>
-
-    <center>
-        <p><b>Fun Fact:</b> The seven-day week has been used for thousands of years</p>
-    </center>
 
     <div class="bottom-nav">
         <a href="page3.html" class="button">Previous</a>
         <a href="page5.html" class="button">Next</a>
     </div>
 
-    <div class="footer">
-        <p>Created by: Charlie | Activity 1: CSS Selector</p>
-    </div>
+    <footer>
+        <p><b>COMPUTER</b></p>
+        <p>Grade 9 - Galatians | SY: 2026-2027</p>
+    </footer>
 
 </body>
+
 </html>
