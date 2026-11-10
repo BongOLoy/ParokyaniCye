@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidential Gallery | Philippines</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #101827;
+            color: #F3E8D0;
+            font-family: Georgia, serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #091321, #1B304C, #091321);
+            text-align: center;
+            padding: 70px 20px 55px;
+            border-bottom: 3px solid #C9A45C;
+        }
+
+        .header-label {
+            color: #C9A45C;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            color: #F3E8D0;
+            font-size: 36px;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        .gold-line {
+            width: 85px;
+            height: 2px;
+            background-color: #C9A45C;
+            margin: 23px auto;
+        }
+
+        header p {
+            color: #C5B99F;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #111E31;
+            padding: 16px;
+            text-align: center;
+            border-bottom: 1px solid #55472E;
+        }
+
+        nav a {
+            color: #D8B66F;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        main {
+            width: 91%;
+            max-width: 1200px;
+            margin: 45px auto;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .intro h2 {
+            color: #E6CB91;
+            font-size: 25px;
+            letter-spacing: 3px;
+            margin: 0 0 8px;
+        }
+
+        .intro p {
+            color: #AAA99F;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .gallery-line {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 35px 0;
+        }
+
+        .gallery-line::before,
+        .gallery-line::after {
+            content: "";
+            height: 1px;
+            background-color: #685535;
+            flex: 1;
+        }
+
+        .gallery-line span {
+            color: #D8B66F;
+            font-size: 11px;
+            letter-spacing: 3px;
+        }
+
+        .president-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .president-card {
+            background: linear-gradient(145deg, #1C2A40, #111D30);
+            border: 1px solid #675637;
+            padding: 14px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .president-card:hover {
+            transform: translateY(-5px);
+            border-color: #D8B66F;
+            box-shadow: 0 8px 25px rgba(201, 164, 92, 0.13);
+        }
+
+        .portrait-frame {
+            background-color: #D8C8A9;
+            padding: 7px;
+            border: 2px solid #B79553;
+        }
+
+        .portrait-frame img {
+            display: block;
+            width: 100%;
+            height: 260px;
+            object-fit: contain;
+            background-color: #E7DDC9;
+        }
+
+        .term {
+            color: #D8B66F;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin: 17px 0 5px;
+        }
+
+        .president-card h3 {
+            color: #F3E8D0;
+            font-size: 19px;
+            margin: 5px 0 12px;
+        }
+
+        .bio-link {
+            display: inline-block;
+            color: #D8B66F;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            border-bottom: 1px solid #75603C;
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+            transition: 0.2s;
+        }
+
+        .bio-link:hover {
+            color: white;
+            border-color: white;
+        }
+
+        .closing {
+            text-align: center;
+            margin: 60px 0 30px;
+            padding: 30px 15px;
+            border-top: 1px solid #55472E;
+            border-bottom: 1px solid #55472E;
+        }
+
+        .closing h2 {
+            color: #D8B66F;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        .closing p {
+            color: #AAA99F;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        footer {
+            background-color: #091321;
+            border-top: 3px solid #B79553;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer h3 {
+            color: #D8B66F;
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        footer p {
+            color: #888D98;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            margin: 7px 0 0;
+        }
+
+        @media (max-width: 800px) {
+            .president-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 550px) {
+            header {
+                padding: 45px 15px;
+            }
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            .president-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portrait-frame img {
+                height: 290px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-label">REPUBLIC OF THE PHILIPPINES</div>
+        <h1>Ang mga Pangulo ng Pilipinas</h1>
+        <div class="gold-line"></div>
+        <p>THE LEADERS OF THE PHILIPPINE NATION</p>
+    </header>
+
+    <nav>
+        <a href="index.html">← BACK TO HOMEPAGE</a>
+    </nav>
+
+    <main>
+
+        <section class="intro">
+            <h2>THE 17 PRESIDENTS</h2>
+            <p>The presidents who have led the Philippines.</p>
+        </section>
+
+        <div class="gallery-line">
+            <span>PHILIPPINE PRESIDENTS</span>
+        </div>
+
+        <section class="president-grid">
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/AguinaldoMP.jpg" alt="Emilio Aguinaldo">
+                </div>
+                <p class="term">1899 – 1901</p>
+                <h3>Emilio Aguinaldo</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Emilio_Aguinaldo" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Manuel_L._Quezon_portrait.jpg" alt="Manuel L. Quezon">
+                </div>
+                <p class="term">1935 – 1944</p>
+                <h3>Manuel L. Quezon</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Manuel_L._Quezon" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/President_Jose_P._Laurel.jpg" alt="Jose P. Laurel">
+                </div>
+                <p class="term">1943 – 1945</p>
+                <h3>Jose P. Laurel</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Jos%C3%A9_P._Laurel" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sergio_Osme%C3%B1a_Official_Malaca%C3%B1an_Portrait.jpg" alt="Sergio Osmeña">
+                </div>
+                <p class="term">1944 – 1946</p>
+                <h3>Sergio Osmeña</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Sergio_Osme%C3%B1a" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Manuel_A_Roxas.jpg" alt="Manuel Roxas">
+                </div>
+                <p class="term">1946 – 1948</p>
+                <h3>Manuel Roxas</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Manuel_Roxas" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Elpidio_Quirino_Official_Malaca%C3%B1an_Portrait.jpg" alt="Elpidio Quirino">
+                </div>
+                <p class="term">1948 – 1953</p>
+                <h3>Elpidio Quirino</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Elpidio_Quirino" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ramon_F_Magsaysay.jpg" alt="Ramon Magsaysay">
+                </div>
+                <p class="term">1953 – 1957</p>
+                <h3>Ramon Magsaysay</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Ramon_Magsaysay" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Carlos_P_Garcia_photo.jpg" alt="Carlos P. Garcia">
+                </div>
+                <p class="term">1957 – 1961</p>
+                <h3>Carlos P. Garcia</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Carlos_P._Garcia" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Diosdado_Macapagal_Official_Malaca%C3%B1an_Portrait.jpg" alt="Diosdado Macapagal">
+                </div>
+                <p class="term">1961 – 1965</p>
+                <h3>Diosdado Macapagal</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Diosdado_Macapagal" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ferdinand_E_Marcos.jpg" alt="Ferdinand Marcos">
+                </div>
+                <p class="term">1965 – 1986</p>
+                <h3>Ferdinand Marcos</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Ferdinand_Marcos" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Corazon_Aquino_1986.jpg" alt="Corazon Aquino">
+                </div>
+                <p class="term">1986 – 1992</p>
+                <h3>Corazon C. Aquino</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Corazon_Aquino" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fidel_V._Ramos.jpg" alt="Fidel V. Ramos">
+                </div>
+                <p class="term">1992 – 1998</p>
+                <h3>Fidel V. Ramos</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Fidel_V._Ramos" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Estrada_official_presidential_portrait.jpg" alt="Joseph Estrada">
+                </div>
+                <p class="term">1998 – 2001</p>
+                <h3>Joseph Estrada</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Joseph_Estrada" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gloria_Macapagal-Arroyo_Presidential_Portrait.jpg" alt="Gloria Macapagal Arroyo">
+                </div>
+                <p class="term">2001 – 2010</p>
+                <h3>Gloria Macapagal Arroyo</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Gloria_Macapagal_Arroyo" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Benigno_%22Noynoy%22_S._Aquino_III.jpg" alt="Benigno Aquino III">
+                </div>
+                <p class="term">2010 – 2016</p>
+                <h3>Benigno Aquino III</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Benigno_Aquino_III" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/President_Rodrigo_Duterte_portrait.jpg" alt="Rodrigo Duterte">
+                </div>
+                <p class="term">2016 – 2022</p>
+                <h3>Rodrigo Duterte</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Rodrigo_Duterte" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_of_President_Ferdinand_R._Marcos,_Jr.jpg" alt="Ferdinand Marcos Jr.">
+                </div>
+                <p class="term">2022 – Present</p>
+                <h3>Ferdinand Marcos Jr.</h3>
+                <a class="bio-link" href="https://en.wikipedia.org/wiki/Bongbong_Marcos" target="_blank">VIEW WIKIPEDIA ↗</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>PRESIDENTIAL GALLERY</h3>
+        <p>PHILIPPINE HISTORY AND LEADERSHIP</p>
+    </footer>
+
+</body>
+</html>
