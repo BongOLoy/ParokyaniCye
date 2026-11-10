@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +8,6 @@
 
     <title>My Homepage | Computer Activity</title>
 
- 
     <style>
         * {
             box-sizing: border-box;
@@ -206,6 +206,57 @@
             overflow-wrap: anywhere;
         }
 
+        .president-feature {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #101827, #1B304C);
+            border: 2px solid #C9A45C;
+            padding: 28px;
+            text-align: center;
+        }
+
+        .president-label {
+            display: inline-block;
+            color: #D8B66F;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            border-bottom: 1px solid #75603C;
+            padding-bottom: 8px;
+        }
+
+        .president-title {
+            color: #F3E8D0 !important;
+            font-family: Georgia, serif;
+            font-size: 21px !important;
+            letter-spacing: 1px;
+            margin: 15px 0 8px !important;
+        }
+
+        .president-description {
+            color: #C5B99F;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .president-button {
+            display: inline-block;
+            background-color: #C9A45C;
+            color: #101827;
+            padding: 11px 22px;
+            border: 1px solid #E6CB91;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: 0.25s;
+        }
+
+        .president-button:hover {
+            background-color: #F3E8D0;
+            transform: translateY(-2px);
+        }
+
         footer {
             background-color: #101B35;
             color: white;
@@ -243,7 +294,6 @@
             outline-offset: 4px;
         }
 
-        
         @media (max-width: 700px) {
             header {
                 padding: 38px 15px;
@@ -277,19 +327,17 @@
         }
     </style>
 
-    
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    
     <header id="home">
         <h1>MY HOMEPAGE</h1>
         <p>COMPUTER | SCHOOL YEAR 2026–2027</p>
     </header>
 
-    <!-- Table of Contents -->
+  
     <nav aria-label="Table of Contents">
         <h2>TABLE OF CONTENTS</h2>
 
@@ -304,7 +352,7 @@
 
     <main>
 
-        <!-- Photo Section -->
+       
         <section class="section-box" id="photo">
             <h2 class="section-title">MY PHOTO</h2>
 
@@ -321,7 +369,7 @@
             </div>
         </section>
 
-        <!-- Quick Links -->
+        
         <section class="section-box" id="quick-links">
             <h2 class="section-title">QUICK LINKS</h2>
 
@@ -354,7 +402,6 @@
             </div>
         </section>
 
-        
         <section class="section-box" id="pages">
             <h2 class="section-title">MY WEB PAGES</h2>
 
@@ -406,12 +453,23 @@
                     <a class="button-link" href="page7.html" target="_blank">VISIT PAGE ↗</a>
                 </div>
 
+                <div class="link-card president-feature">
+                    <span class="president-label">President Page</span>
+                    <h3 class="president-title">ANG MGA PANGULO NG PILIPINAS</h3>
+                    <p class="president-description">
+                        Discover the 17 presidents who have led the Philippine nation.
+                    </p>
+                    <a class="president-button" href="president.html">
+                        EXPLORE THE PRESIDENTS →
+                    </a>
+                </div>
+
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
+
     <footer id="footer">
         <p class="school-year">SCHOOL YEAR 2026–2027</p>
         <p>Computer / My Homepage</p>
