@@ -1,6 +1,523 @@
 
 <!DOCTYPE html>
+<html la
+<!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidential Gallery | Philippines</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #101827;
+            color: #F3E8D0;
+            font-family: Georgia, serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #091321, #1B304C, #091321);
+            text-align: center;
+            padding: 70px 20px 55px;
+            border-bottom: 3px solid #C9A45C;
+        }
+
+        .header-label {
+            color: #C9A45C;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            color: #F3E8D0;
+            font-size: 36px;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        .gold-line {
+            width: 85px;
+            height: 2px;
+            background-color: #C9A45C;
+            margin: 23px auto;
+        }
+
+        header p {
+            color: #C5B99F;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #111E31;
+            padding: 16px;
+            text-align: center;
+            border-bottom: 1px solid #55472E;
+        }
+
+        nav a {
+            color: #D8B66F;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        main {
+            width: 91%;
+            max-width: 1200px;
+            margin: 45px auto;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .intro h2 {
+            color: #E6CB91;
+            font-size: 25px;
+            letter-spacing: 3px;
+            margin: 0 0 8px;
+        }
+
+        .intro p {
+            color: #AAA99F;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .gallery-line {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 35px 0;
+        }
+
+        .gallery-line::before,
+        .gallery-line::after {
+            content: "";
+            height: 1px;
+            background-color: #685535;
+            flex: 1;
+        }
+
+        .gallery-line span {
+            color: #D8B66F;
+            font-size: 11px;
+            letter-spacing: 3px;
+        }
+
+        .president-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .president-card {
+            background: linear-gradient(145deg, #1C2A40, #111D30);
+            border: 1px solid #675637;
+            padding: 14px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .president-card:hover {
+            transform: translateY(-5px);
+            border-color: #D8B66F;
+            box-shadow: 0 8px 25px rgba(201, 164, 92, 0.13);
+        }
+
+        .portrait-frame {
+            background-color: #D8C8A9;
+            padding: 7px;
+            border: 2px solid #B79553;
+        }
+
+        .portrait-frame img {
+            display: block;
+            width: 100%;
+            height: 260px;
+            object-fit: contain;
+            background-color: #E7DDC9;
+        }
+
+        .portrait-link {
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .portrait-link img {
+            transition: 0.25s;
+        }
+
+        .portrait-link:hover img {
+            opacity: 0.88;
+            transform: scale(1.015);
+        }
+
+        .term {
+            color: #D8B66F;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin: 17px 0 5px;
+        }
+
+        .president-card h3 {
+            color: #F3E8D0;
+            font-size: 19px;
+            margin: 5px 0 12px;
+        }
+
+        .full-name {
+            color: #C5B99F;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            line-height: 1.5;
+            margin: -5px 0 12px;
+        }
+
+        .age {
+            color: #D8B66F;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 10px 0 4px;
+        }
+
+        .achievement {
+            color: #C5B99F;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            line-height: 1.6;
+            margin: 5px 2px 8px;
+        }
+
+        footer {
+            background-color: #091321;
+            border-top: 3px solid #B79553;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer h3 {
+            color: #D8B66F;
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        footer p {
+            color: #888D98;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            margin: 7px 0 0;
+        }
+
+        @media (max-width: 800px) {
+            .president-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 550px) {
+            header {
+                padding: 45px 15px;
+            }
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            .president-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portrait-frame img {
+                height: 290px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-label">REPUBLIC OF THE PHILIPPINES</div>
+        <h1>Ang mga Pangulo ng Pilipinas</h1>
+        <div class="gold-line"></div>
+        <p>THE LEADERS OF THE PHILIPPINE NATION</p>
+    </header>
+
+    <nav>
+        <a href="index.html">← BACK TO HOMEPAGE</a>
+    </nav>
+
+    <main>
+
+        <section class="intro">
+            <h2>THE 17 PRESIDENTS</h2>
+            <p>Select a president's portrait to read their biography.</p>
+        </section>
+
+        <div class="gallery-line">
+            <span>PHILIPPINE PRESIDENTS</span>
+        </div>
+
+        <section class="president-grid">
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="president1.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/AguinaldoMP.jpg" alt="Emilio Aguinaldo">
+                    </a>
+                </div>
+                <p class="term">1899 – 1901</p>
+                <h3>Emilio Aguinaldo</h3>
+                <p class="full-name">Full name: Emilio Aguinaldo y Famy</p>
+                <p class="age">AGE AT DEATH: 94 years old</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Established the First Philippine Republic in 1899 and led the government that adopted the Malolos Constitution.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="president2.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Manuel_L._Quezon_portrait.jpg" alt="Manuel L. Quezon">
+                    </a>
+                </div>
+                <p class="term">1935 – 1944</p>
+                <h3>Manuel L. Quezon</h3>
+                <p class="full-name">Full name: Manuel Luis Quezon</p>
+                <p class="age">AGE AT DEATH: 65 years old</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Helped establish the Commonwealth government and promoted the development of a national language and social justice programs.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="president3.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/President_Jose_P._Laurel.jpg" alt="Jose P. Laurel">
+                    </a>
+                </div>
+                <p class="term">1943 – 1945</p>
+                <h3>Jose P. Laurel</h3>
+                <p class="full-name">Full name: José Paciano Laurel y García</p>
+                <p class="age">AGE AT DEATH: 68 years old</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Led the Japanese-sponsored Second Philippine Republic during World War II. His presidency took place under occupation and remains a complex, controversial period in Philippine history.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="president4.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sergio_Osme%C3%B1a_Official_Malaca%C3%B1an_Portrait.jpg" alt="Sergio Osmeña">
+                    </a>
+                </div>
+                <p class="term">1944 – 1946</p>
+                <h3>Sergio Osmeña</h3>
+                <p class="full-name">Full name: Sergio Osmeña Sr.</p>
+                <p class="age">AGE AT DEATH: 83 years old</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Led the Commonwealth government after Quezon's death and helped guide the country through liberation and postwar reconstruction.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="president5.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Manuel_A_Roxas.jpg" alt="Manuel Roxas">
+                    </a>
+                </div>
+                <p class="term">1946 – 1948</p>
+                <h3>Manuel Roxas</h3>
+                <p class="full-name">Full name: Manuel Acuña Roxas</p>
+                <p class="age">AGE AT DEATH: 56 years old</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Became the first president of the independent Third Republic in 1946 and led the country's early postwar rebuilding.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="president6.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Elpidio_Quirino_Official_Malaca%C3%B1an_Portrait.jpg" alt="Elpidio Quirino">
+                    </a>
+                </div>
+                <p class="term">1948 – 1953</p>
+                <h3>Elpidio Quirino</h3>
+                <p class="full-name">Full name: Elpidio Rivera Quirino</p>
+                <p class="age">AGE AT DEATH: 65 years old</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Promoted postwar rehabilitation and rural development, including programs intended to improve housing and conditions for farmers.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="president7.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ramon_F_Magsaysay.jpg" alt="Ramon Magsaysay">
+                    </a>
+                </div>
+                <p class="term">1953 – 1957</p>
+                <h3>Ramon Magsaysay</h3>
+                <p class="full-name">Full name: Ramon del Fierro Magsaysay</p>
+                <p class="age">AGE AT DEATH: 49 years old</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Strengthened rural development and land-reform efforts, while his administration helped weaken the Huk rebellion and made the government more accessible to ordinary citizens.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="president8.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Carlos_P_Garcia_photo.jpg" alt="Carlos P. Garcia">
+                    </a>
+                </div>
+                <p class="term">1957 – 1961</p>
+                <h3>Carlos P. Garcia</h3>
+                <p class="full-name">Full name: Carlos Polestico Garcia</p>
+                <p class="age">AGE AT DEATH: 74 years old</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Introduced the Filipino First Policy, which encouraged giving Filipino businesses and workers priority in the national economy.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="president9.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Diosdado_Macapagal_Official_Malaca%C3%B1an_Portrait.jpg" alt="Diosdado Macapagal">
+                    </a>
+                </div>
+                <p class="term">1961 – 1965</p>
+                <h3>Diosdado Macapagal</h3>
+                <p class="full-name">Full name: Diosdado Pangan Macapagal</p>
+                <p class="age">AGE AT DEATH: 86 years old</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Signed the Agricultural Land Reform Code of 1963 and moved the celebration of Philippine Independence Day to June 12.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="presidentdiv10.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ferdinand_E_Marcos.jpg" alt="Ferdinand Marcos">
+                    </a>
+                </div>
+                <p class="term">1965 – 1986</p>
+                <h3>Ferdinand Marcos</h3>
+                <p class="full-name">Full name: Ferdinand Emmanuel Edralin Marcos</p>
+                <p class="age">AGE AT DEATH: 72 years old</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Oversaw major infrastructure projects, including roads, bridges, and public buildings. His administration also imposed Martial Law and was marked by authoritarian rule and human-rights abuses.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="presidentdiv11.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Corazon_Aquino_1986.jpg" alt="Corazon Aquino">
+                    </a>
+                </div>
+                <p class="term">1986 – 1992</p>
+                <h3>Corazon C. Aquino</h3>
+                <p class="full-name">Full name: Maria Corazon Sumulong Cojuangco Aquino</p>
+                <p class="age">AGE AT DEATH: 76 years old</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Restored democratic institutions after the 1986 People Power Revolution and oversaw the ratification of the 1987 Constitution.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="presidentdiv12.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fidel_V._Ramos.jpg" alt="Fidel V. Ramos">
+                    </a>
+                </div>
+                <p class="term">1992 – 1998</p>
+                <h3>Fidel V. Ramos</h3>
+                <p class="full-name">Full name: Fidel Valdez Ramos</p>
+                <p class="age">AGE AT DEATH: 94 years old</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Helped end the power crisis and signed the 1996 peace agreement with the Moro National Liberation Front, while pursuing economic reforms.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="presidentdiv13.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Estrada_official_presidential_portrait.jpg" alt="Joseph Estrada">
+                    </a>
+                </div>
+                <p class="term">1998 – 2001</p>
+                <h3>Joseph Estrada</h3>
+                <p class="full-name">Full name: Jose Marcelo Ejercito</p>
+                <p class="age">STILL LIVING</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Promoted the Lingap para sa Mahirap program, which aimed to provide assistance and basic services to poor communities.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="presidentdiv14.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gloria_Macapagal-Arroyo_Presidential_Portrait.jpg" alt="Gloria Macapagal Arroyo">
+                    </a>
+                </div>
+                <p class="term">2001 – 2010</p>
+                <h3>Gloria Macapagal Arroyo</h3>
+                <p class="full-name">Full name: Gloria Macaraeg Macapagal Arroyo</p>
+                <p class="age">STILL LIVING</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Launched the 4Ps conditional cash transfer program in 2007 to support the health and education of low-income families.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="presidentdiv15.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Benigno_%22Noynoy%22_S._Aquino_III.jpg" alt="Benigno Aquino III">
+                    </a>
+                </div>
+                <p class="term">2010 – 2016</p>
+                <h3>Benigno Aquino III</h3>
+                <p class="full-name">Full name: Benigno Simeon Cojuangco Aquino III</p>
+                <p class="age">AGE AT DEATH: 61 years old</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Oversaw the passage of the Sin Tax Reform Act and the K–12 education reform, and pursued a peace agreement with the Moro Islamic Liberation Front.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="presidentdiv16.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/President_Rodrigo_Duterte_portrait.jpg" alt="Rodrigo Duterte">
+                    </a>
+                </div>
+                <p class="term">2016 – 2022</p>
+                <h3>Rodrigo Duterte</h3>
+                <p class="full-name">Full name: Rodrigo Roa Duterte</p>
+                <p class="age">STILL LIVING</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> Signed the Universal Health Care Act and the Bangsamoro Organic Law, and launched the Build, Build, Build infrastructure program.</p>
+            </div>
+
+            <div class="president-card">
+                <div class="portrait-frame">
+                    <a class="portrait-link" href="presidentdiv17.html">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_of_President_Ferdinand_R._Marcos,_Jr.jpg" alt="Ferdinand Marcos Jr.">
+                    </a>
+                </div>
+                <p class="term">2022 – Present</p>
+                <h3>Ferdinand Marcos Jr.</h3>
+                <p class="full-name">Full name: Ferdinand Romualdez Marcos Jr.</p>
+                <p class="age">STILL LIVING</p>
+                <p class="achievement"><strong>NOTABLE CONTRIBUTION:</strong> His administration has continued major infrastructure projects through the Build Better More program. His term is ongoing, so his overall record is still developing.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>PRESIDENTIAL GALLERY</h3>
+        <p>PHILIPPINE HISTORY AND LEADERSHIP</p>
+    </footer>
+
+</body>
+</html>
+">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
